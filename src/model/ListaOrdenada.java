@@ -41,11 +41,15 @@ public class ListaOrdenada<T extends Comparable<T>> extends ListaAbstract<T> {
             int comparacao = valor.compareTo((T) info[meio]);
             if (comparacao < 0) {
                 fim = meio - 1;
-            }else{
-                return meio;
+            } else {
+                if (comparacao > 0) {
+                    inicio = meio + 1;
+                } else {
+                    return meio;
+                }
             }
         }
-        
+
         return -1;
     }
 

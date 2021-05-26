@@ -30,8 +30,8 @@ public abstract class ListaAbstract<T> {
         info = vetorNovo;
 
     }
-    
-    public int getLimite(){
+
+    public int getLimite() {
         return info.length;
     }
 
